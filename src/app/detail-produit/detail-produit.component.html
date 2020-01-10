@@ -1,0 +1,29 @@
+<!-- PAGE CONTAINER-->
+<div class="page-container">
+  <div class="main-content">
+    <div class="section__content section__content--p30">
+      <div class="container-fluid">
+        <div class="row m-t-30">
+          <div class="col-md-12">
+            <div *ngFor="let i of listimage; let index = index">
+              <table>
+                <tr>
+                  <th>
+                    <img src="http://localhost:8080/upload/files/{{ listimage[index]}}" />
+                  </th>
+                  <th> <br></th>
+                  <th>{{detail_prod.name}}<br>
+                    {{detail_prod.description}}<br>
+                    {{detail_prod.price}}<br>
+                    {{detail_prod.quantity}}
+                  </th>
+
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

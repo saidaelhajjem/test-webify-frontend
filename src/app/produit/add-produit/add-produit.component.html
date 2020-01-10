@@ -1,0 +1,64 @@
+<div class="page-container">
+  <div class="main-content">
+    <div class="section__content section__content--p30">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">Ajouter produit</div>
+              <div class="card-body card-block">
+                <form action="" method="post" class="" [formGroup]="produitForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input type="text" id="name" name="name" placeholder="name" class="form-control"
+                        formControlName="name">
+
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input type="text" id="email2" name="email2" placeholder="description" class="form-control"
+                        formControlName="description">
+
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input type="text" id="password2" name="password2" placeholder="Price" class="form-control"
+                        formControlName="price">
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input type="text" id="password2" name="password2" placeholder="Quantity" class="form-control"
+                        formControlName="quantity">
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <img *ngFor='let url of urls' [src]="url" height="200"> <br />
+
+
+
+                      <input id="fileInput" type="file" class="form-control-file" id="fileid" formControlName="image"
+                        type='file' (change)="recuperFile($event)" multiple required />
+
+                    </div>
+                  </div>
+                  <div class="form-actions form-group">
+                    <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
